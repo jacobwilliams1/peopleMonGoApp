@@ -1,15 +1,12 @@
 package com.example.rodneytressler.budge.Network;
 
-import com.example.rodneytressler.budge.Models.Account;
 import com.example.rodneytressler.budge.Models.User;
-import com.google.android.gms.maps.model.LatLng;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -37,9 +34,14 @@ public interface ApiService {
     Call<Void> caught(@Body User user);
 
     @GET("/api/Account/UserInfo")
-    Call<User[]> userInfo();
+    Call<User> userInfo();
 
     @GET ("/v1/User/Caught")
     Call<User[]> caughtUsers();
+
+    @POST("/api/Account/UserInfo")
+    Call<Void> updateInfo(@Body User user);
+
+
 
 }

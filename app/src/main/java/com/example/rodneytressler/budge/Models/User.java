@@ -15,7 +15,7 @@ public class User {
     @SerializedName("fullName")
     private String fullName;
 
-    @SerializedName("avatarBase64")
+    @SerializedName("AvatarBase64")
     private String avatarBase64;
 
     @SerializedName("ApiKey")
@@ -29,9 +29,6 @@ public class User {
 
     @SerializedName("grant_type")
     private String grantType;
-
-    @SerializedName("username")
-    private String username;
 
     @SerializedName("access_token")
     private String access_token;
@@ -52,8 +49,16 @@ public class User {
     private String id;
 
     @SerializedName("RadiusInMeters")
-    private float radius;
+    private Float radius;
 
+    @SerializedName("Created")
+    private String created;
+
+    public User(String fullName, String avatarBase64) {
+        this.fullName=fullName;
+        this.avatarBase64 = avatarBase64;
+
+    }
 
     public User(double latitude, double longitude) {
         this.latitude = latitude;
@@ -70,7 +75,14 @@ public class User {
         this.Email = username;
         this.password = password;
     }
-
+    public User(String userId, String userName, String avatarBase64, Double longitude, Double latitude, String created) {
+        this.id = userId;
+        this.userName = userName;
+        this.created = created;
+        this.avatarBase64 = avatarBase64;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
 
     public User(String fullName, String email, String password, String grantType, String apiKey, String avatarBase64) {
         this.fullName = fullName;
@@ -122,14 +134,6 @@ public class User {
 
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -184,7 +188,7 @@ public class User {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(Float radius) {
         this.radius = radius;
     }
 
@@ -202,5 +206,13 @@ public class User {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public void setCreated(String created) {
+        this.created = created;
     }
 }

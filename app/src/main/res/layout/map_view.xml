@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.example.rodneytressler.budge.Views.PokeMapView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/lib/com.example.rodneytressler.budget"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <com.google.android.gms.maps.MapView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/mapView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -19,7 +13,11 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="19dp"
         android:layout_marginBottom="13dp"
-        android:id="@+id/floatingActionButton" />
+        android:id="@+id/floatingActionButton"
+        android:src="@drawable/bag"
+        android:scaleX="2.5"
+        android:scaleY="2.5"
+        app2:backgroundTint="@android:color/transparent" />
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -29,7 +27,11 @@
         app:srcCompat="@android:drawable/ic_menu_mapmode"
         android:layout_alignBottom="@+id/floatingActionButton"
         android:layout_centerHorizontal="true"
-        android:id="@+id/floatingActionButton2" />
+        android:id="@+id/floatingActionButton2"
+        android:src="@drawable/directions"
+        android:scaleX="2.5"
+        android:scaleY="2.5"
+        app2:backgroundTint="@android:color/transparent" />
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -37,9 +39,22 @@
         android:clickable="true"
         app:fabSize="mini"
         app:srcCompat="@android:drawable/presence_busy"
-        android:layout_alignBottom="@+id/floatingActionButton2"
+        android:id="@+id/floatingActionButton3"
+        android:layout_alignTop="@+id/floatingActionButton2"
         android:layout_alignParentEnd="true"
-        android:id="@+id/floatingActionButton3" />
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/red"
+        app2:backgroundTint="@android:color/transparent"
+        android:scaleX="2.5"
+        android:scaleY="2.5"
+        android:background="@android:drawable/screen_background_light_transparent" />
+
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
 
 </com.example.rodneytressler.budge.Views.PokeMapView>

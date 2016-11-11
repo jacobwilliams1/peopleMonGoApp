@@ -16,8 +16,8 @@ public class Utils {
         Bitmap decodedByte;
         if (encodedString != null) {
             if (encodedString.contains(",")) {
-                String[] haxor = encodedString.split(",");
-                decodedString = Base64.decode(haxor[1], Base64.DEFAULT);
+                String[] img = encodedString.split(",");
+                decodedString = Base64.decode(img[1], Base64.DEFAULT);
             } else {
                 if (encodedString.length() > 200) {
                     decodedString = Base64.decode(encodedString, Base64.DEFAULT);

@@ -10,5 +10,7 @@ public final class Constants {
     public static final String grantType = "password";
     public static final String apiKey = "iOSandroid301november2016";
     public static String IMAGE = "iOSandroid301november2016";
+    public static Integer RADIUS_IN_METERS = 100;
+
 
 }
